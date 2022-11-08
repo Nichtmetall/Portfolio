@@ -18,46 +18,27 @@ export default function Home() {
             <div className="flex flex-col pr-8">
               <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
                 Hei. I'm Anton!
-                
               </h1>
               <h2 className="text-xl text-gray-700 dark:text-gray-200 mb-4">
-                <Typewriter options={{
-                    strings: ['I build with MS Power Platform.', 'I code with React.', 'I do WordPress.'],
+                <Typewriter
+                  options={{
+                    strings: [
+                      'I build with MS Power Platform.',
+                      'I code with React.',
+                      'I do WordPress.'
+                    ],
                     autoStart: true,
-                    loop: true,
-                  }} />
+                    loop: true
+                  }}
+                />
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-1">
                 Helping developers build a faster web. Teaching about web
                 development, serverless, and React / Next.js.
               </p>
-              <p className='mb-16'>
-              <Link
-            href="mailto:contact@hofmann-anton.de"
-            className="flex items-center mt-8 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
-          >
-            <>
-              {'Get in touch'}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="h-6 w-6 ml-1"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17.5 12h-15m11.667-4l3.333 4-3.333-4zm3.333 4l-3.333 4 3.333-4z"
-                />
-              </svg>
-            </>
-          </Link>
-              </p>
-              
             </div>
-            <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">
+            ∏
+            <div className="w-[80px] sm:w-[176px] relative sm:mb-0 mr-auto">
               <Image
                 alt="Lee Robinson"
                 height={176}
@@ -69,6 +50,38 @@ export default function Home() {
               />
             </div>
           </div>
+
+          <button
+            aria-label="GitHub"
+            type="button"
+            className="mainbutton mb-32"
+            onClick={() =>
+              window.open(
+                'https://github.com/Nichtmetall',
+                '_blank',
+                'noopener,noreferrer'
+              )
+            }
+          >
+            <div className="flex items-center justify-center">
+              <span>Get in contact</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                className="h-6 w-6 ml-1"
+              >
+                {' '}
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17.5 12h-15m11.667-4l3.333 4-3.333-4zm3.333 4l-3.333 4 3.333-4z"
+                />
+              </svg>
+            </div>
+          </button>
 
           <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
             Featured Posts
@@ -90,7 +103,6 @@ export default function Home() {
               gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
             />
           </div>
-          
 
           <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-16 text-black dark:text-white">
             Learn React & Next.js
